@@ -19,7 +19,7 @@ pip install -r requirements.txt
 
 * MSVR310 [GET](https://drive.google.com/file/d/1IxI-fGiluPO_Ies6YjDHeTEuVYhFdYwD/view)
 ## Pretrained Model🍉
-* ViT-B-16 [GET](https://pan.baidu.com/share/init?surl=YPhaL0YgpI-TQ_pSzXHRKw?pwd=52fu) 
+* ViT-B-16 [GET](https://pan.baidu.com/share/init?surl=YPhaL0YgpI-TQ_pSzXHRKw) (code:52fu)
 ## Training🍒
 ```
 python train.py --config_file configs/RGBNT201/Signal.yml
