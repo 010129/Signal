@@ -18,17 +18,7 @@ class TokenSelection(nn.Module):
        
         batch_size = rgb_patches.size(0)
 
-        # rgb_global = self.W_q(rgb_global) 
-        # rgb_patches = self.W_k(rgb_patches) 
-        # nir_global = self.W_q(nir_global) 
-        # nir_patches = self.W_k(nir_patches) 
-        # tir_global = self.W_q(tir_global) 
-        # tir_patches = self.W_k(tir_patches) 
-        
-        
-        # rgb_scores = torch.bmm(rgb_global.unsqueeze(1), rgb_patches.transpose(1, 2)).squeeze(1)  
-        # nir_scores = torch.bmm(nir_global.unsqueeze(1), nir_patches.transpose(1, 2)).squeeze(1)
-        # tir_scores = torch.bmm(tir_global.unsqueeze(1), tir_patches.transpose(1, 2)).squeeze(1)
+
 
         rgb_scores = F.softmax((torch.bmm(rgb_global.unsqueeze(1), rgb_patches.transpose(1, 2))/math.sqrt(self.dim)).squeeze(1),dim=1)  
         nir_scores = F.softmax((torch.bmm(nir_global.unsqueeze(1), nir_patches.transpose(1, 2))/math.sqrt(self.dim)).squeeze(1),dim=1)  
@@ -219,5 +209,6 @@ class Select_Interactive_Module(nn.Module):
         
 
         return final_feature
+
 
 
