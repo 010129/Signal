@@ -159,8 +159,7 @@ class ModalInteractive(nn.Module):
         super().__init__()
         self.dim = dim
         self.num_heads = num_heads
-        # self.W_q = nn.Linear(dim, dim)
-        # self.W_k = nn.Linear(dim, dim)
+
         self.cross_attn = nn.MultiheadAttention(dim, num_heads, batch_first=True)
         
        
@@ -179,9 +178,7 @@ class ModalInteractive(nn.Module):
         queries = torch.stack([rgb_global, nir_global, tir_global], dim=1)  # [bs, 3, dim]
         keys_values = torch.cat([rgb_selected, nir_selected, tir_selected], dim=1)  # [bs, 3*n, dim]
 
-        # queries = self.W_q(queries) 
-        # keys_values = self.W_k(keys_values)  
-        
+
         attn_output, _ = self.cross_attn(queries, keys_values, keys_values)
         
         attn_output = self.norm1(queries + attn_output)
@@ -222,4 +219,5 @@ class Select_Interactive_Module(nn.Module):
         
 
         return final_feature
+
 
