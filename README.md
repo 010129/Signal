@@ -4,7 +4,8 @@ Our paper has been accepted to **AAAI-2026**🌹! Paper
 
 ## Environment🍊
 **Our env: python=3.10.13, torch=2.1.1+cu118,  NVIDIA GeForce RTX 3090 GPU.**
-You can prepare according to the following steps:
+
+**You can prepare according to the following steps:**
 ``` 
 conda create -n myenv python=3.10.13
 conda activate myenv
