@@ -44,28 +44,35 @@ To address multi-modal object ReID challenges, we propose **Signal**, a selectiv
     <img src="READ_image/main.svg" alt="Overall Framework" style="width:100%;">
 </p>
 
+### GAM
 <p align="center">
     <img src="READ_image/Global.svg" alt="GAM" style="width:60%;">
 </p>
 
+### LAM
 <p align="center">
-    <img src="READ_image/Local.svg" alt="LAM" style="width:100%;">
+    <img src="READ_image/Local.svg" alt="LAM" style="width:60%;">
 </p>
+
 ## Results🥂
 
+### Performance on RGBNT201
 <p align="center">
-    <img src="READ_image/RGBNT201.png" alt="RGBNT201" style="width:100%;">
+    <img src="READ_image/RGBNT201.png" alt="RGBNT201" style="width:60%;">
 </p>
 
+### Performance on RGBNT100&MSVR310
 <p align="center">
-    <img src="READ_image/RGBNT100_MSVR310.png" alt="RGBNT100_MSVR310" style="width:100%;">
+    <img src="READ_image/RGBNT100_MSVR310.png" alt="RGBNT100_MSVR310" style="width:60%;">
 </p>
 
+### Token Visual
 <p align="center">
-    <img src="READ_image/tokenvisual.svg" alt="tokenvisual" style="width:100%;">
+    <img src="READ_image/tokenvisual.svg" alt="tokenvisual" style="width:60%;">
 </p>
 
+### Offsets Visual
 <p align="center">
-    <img src="READ_image/offsets.png" alt="offsets" style="width:100%;">
+    <img src="READ_image/offsets.png" alt="offsets" style="width:60%;">
 </p>
 
