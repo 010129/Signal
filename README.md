@@ -7,7 +7,7 @@ Our paper has been accepted to AAAI-2026! Paper
 conda create -n myenv python=3.10.13
 conda activate myenv
 pip install -r requirements.txt
-
+```
 ## Datasets
 
 ## Pretrained Model
