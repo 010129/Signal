@@ -37,6 +37,6 @@ python test.py
 * We propose the Local Alignment Module (LAM) to align local features in a shift-aware manner, effectively addressing pixel-level misalignment across modalities.
 * Extensive experiments on three multi-modal object ReID datasets validate the effectiveness of our method.
 ## Overall Framework🍠
-
+[framework](READ_image/main.svg)
 ## Results🥂
 
