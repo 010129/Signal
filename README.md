@@ -45,7 +45,7 @@ To address multi-modal object ReID challenges, we propose **Signal**, a selectiv
 </p>
 
 <p align="center">
-    <img src="READ_image/Global.svg" alt="GAM" style="width:100%;">
+    <img src="READ_image/Global.svg" alt="GAM" style="width:60%;">
 </p>
 
 <p align="center">
