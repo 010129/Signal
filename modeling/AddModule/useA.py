@@ -26,9 +26,13 @@ class TokenSelection(nn.Module):
         # tir_patches = self.W_k(tir_patches) 
         
         
-        rgb_scores = torch.bmm(rgb_global.unsqueeze(1), rgb_patches.transpose(1, 2)).squeeze(1)  
-        nir_scores = torch.bmm(nir_global.unsqueeze(1), nir_patches.transpose(1, 2)).squeeze(1)
-        tir_scores = torch.bmm(tir_global.unsqueeze(1), tir_patches.transpose(1, 2)).squeeze(1)
+        # rgb_scores = torch.bmm(rgb_global.unsqueeze(1), rgb_patches.transpose(1, 2)).squeeze(1)  
+        # nir_scores = torch.bmm(nir_global.unsqueeze(1), nir_patches.transpose(1, 2)).squeeze(1)
+        # tir_scores = torch.bmm(tir_global.unsqueeze(1), tir_patches.transpose(1, 2)).squeeze(1)
+
+        rgb_scores = F.softmax((torch.bmm(rgb_global.unsqueeze(1), rgb_patches.transpose(1, 2))/math.sqrt(self.dim)).squeeze(1),dim=1)  
+        nir_scores = F.softmax((torch.bmm(nir_global.unsqueeze(1), nir_patches.transpose(1, 2))/math.sqrt(self.dim)).squeeze(1),dim=1)  
+        tir_scores = F.softmax((torch.bmm(tir_global.unsqueeze(1), tir_patches.transpose(1, 2))/math.sqrt(self.dim)).squeeze(1),dim=1)  
         
         rgb_topk, rgb_indices = torch.topk(rgb_scores, min(self.k1, rgb_scores.size(1)), dim=1)
         nir_topk, nir_indices = torch.topk(nir_scores, min(self.k1, nir_scores.size(1)), dim=1)
@@ -215,4 +219,5 @@ class Select_Interactive_Module(nn.Module):
             rgb_selected, nir_selected, tir_selected, rgb_global, nir_global, tir_global
         )
         
+
         return final_feature
