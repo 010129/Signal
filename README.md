@@ -35,7 +35,7 @@ To address multi-modal object ReID challenges, we propose **Signal**, a selectiv
 * **Local Alignment Module (LAM)**: Refines fine-grained alignment via deformable sampling, handling pixel-level misalignment.
 ## Contributions🥬
 * We propose a novel selective interaction and global-local alignment framework named Signal for multi-modal object ReID, which effectively addresses the challenges of background interference and multi-modal misalignment.
-* We propose the Selective Interaction Module (SIM) to leverage inter-modal and intra-modal attention scores for selecting important patch tokens, thereby mitigating background interference in multi-modal fusion.
+* We propose the Selective Interaction Module (SIM) to leverage inter-modal and intra-modal information for selecting important patch tokens, thereby mitigating background interference in multi-modal fusion.
 * We propose the Global Alignment Module (GAM) to  simultaneously align multi-modal features through minimizing the volume of 3D polyhedra in the gramian space.
 * We propose the Local Alignment Module (LAM) to align local features in a shift-aware manner, effectively addressing pixel-level misalignment across modalities.
 * Extensive experiments on three multi-modal object ReID datasets validate the effectiveness of our method.
@@ -77,4 +77,4 @@ To address multi-modal object ReID challenges, we propose **Signal**, a selectiv
 </p>
 
 ## Notes
-Thank you!
+* Thank you for your attention and interest!
