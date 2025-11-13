@@ -7,9 +7,9 @@ MODEL:
   ID_LOSS_WEIGHT: 0.25
   TRIPLET_LOSS_WEIGHT: 1.0
   Gram_Loss_weight: 0.2
-  PAT_Loss_weight: 0.2
+  PAT_Loss_weight: 0.01
   USE_A: True
-  TOPK: 80
+  TOPK: 64
   USE_B: True
   stageName: 'together_CLS_Patch'     # [CLS,  together_CLS_Patch]
 
@@ -22,23 +22,26 @@ INPUT:
 
 DATALOADER:
   SAMPLER: 'softmax_triplet'
-  NUM_INSTANCE: 8
-  NUM_WORKERS: 12
+  NUM_INSTANCE: 4
+  NUM_WORKERS: 8
 
 DATASETS:
   NAMES: ('MSVR310')
   ROOT_DIR: '..'
 
 SOLVER:
-  BASE_LR: 0.00035
+  BASE_LR: 5e-6
   WARMUP_ITERS: 10
-  MAX_EPOCHS: 50
+  MAX_EPOCHS: 60
   OPTIMIZER_NAME: 'Adam'
+  GAMMA: 0.1
   IMS_PER_BATCH: 64
   EVAL_PERIOD: 1
+  STEPS: [30, 50] 
+
 
 TEST:
-  IMS_PER_BATCH: 128
+  IMS_PER_BATCH: 64
   RE_RANKING: 'no'
   WEIGHT: ''
   NECK_FEAT: 'before'
