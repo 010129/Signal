@@ -84,9 +84,15 @@ if __name__ == '__main__':
 
     optimizer, optimizer_center = make_optimizer(cfg, model, center_criterion)
 
-    scheduler = create_scheduler(cfg, optimizer)
-    #scheduler = WarmupMultiStepLR(optimizer, cfg.SOLVER.STEPS, cfg.SOLVER.GAMMA, cfg.SOLVER.WARMUP_FACTOR,
-                                  #cfg.SOLVER.WARMUP_ITERS, cfg.SOLVER.WARMUP_METHOD)
+    if cfg.DATASETS.NAMES not in ["MSVR310"]:
+        scheduler = create_scheduler(cfg, optimizer)
+    else:
+        scheduler = WarmupMultiStepLR(optimizer, cfg.SOLVER.STEPS, cfg.SOLVER.GAMMA, cfg.SOLVER.WARMUP_FACTOR,
+                                      cfg.SOLVER.WARMUP_ITERS, cfg.SOLVER.WARMUP_METHOD)
+        
+    # scheduler = create_scheduler(cfg, optimizer)
+    # scheduler = WarmupMultiStepLR(optimizer, cfg.SOLVER.STEPS, cfg.SOLVER.GAMMA, cfg.SOLVER.WARMUP_FACTOR,
+    #                               cfg.SOLVER.WARMUP_ITERS, cfg.SOLVER.WARMUP_METHOD)
     do_train(
         cfg,
         model,
