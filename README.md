@@ -3,7 +3,7 @@
 Our paper has been accepted by **AAAI-2026**🌹! Paper
 
 ## Environment🍊
-**Our env: python=3.10.13, cuda:11.8, NVIDIA GeForce RTX 3090 GPU.**
+**Our env: python=3.10.13, cuda:11.8.**
 
 **You can prepare according to the following steps:**
 ``` 
