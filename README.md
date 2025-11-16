@@ -28,9 +28,9 @@ python train.py --config_file configs/RGBNT201/Signal.yml
 Our model's pth files are here:
 | dataset | mAP | R-1 | pth |
 |-------|-------|-------|-------|
-| RGBNT201 | 80.3 | 85.2 | [Signal_model.pth](https://pan.baidu.com/s/1RUCXzp_EjsqOaPxWDssGsQ?pwd=sign) |
-| RGBNT100 | 86.3 | 97.6 | [Signal_model.pth](https://pan.baidu.com/s/1RUCXzp_EjsqOaPxWDssGsQ?pwd=sign) |
-| MSVR310 | 53.2 | 72.4 | [Signal_model.pth](https://pan.baidu.com/s/1RUCXzp_EjsqOaPxWDssGsQ?pwd=sign) |
+| RGBNT201 | 80.3 | 85.2 | [Signal_model.pth](https://pan.baidu.com/s/1mcOa-TB7_dL28a-TJmk5fg?pwd=sign) |
+| RGBNT100 | 86.3 | 97.6 | [Signal_model.pth](https://pan.baidu.com/s/1mcOa-TB7_dL28a-TJmk5fg?pwd=sign) |
+| MSVR310 | 53.2 | 72.4 | [Signal_model.pth](https://pan.baidu.com/s/1mcOa-TB7_dL28a-TJmk5fg?pwd=sign) |
 
 ## Test🥝
 ```
