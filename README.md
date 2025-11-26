@@ -1,6 +1,6 @@
 # Signal: Selective Interaction and Global-local Alignment for Multi-Modal Object Re-Identification
 ## News🍎
-Our paper has been accepted by **AAAI-2026**🌹! Paper
+Our paper has been accepted by **AAAI-2026**🌹! Paper is [here](https://www.arxiv.org/abs/2511.17965).
 
 ## Environment🍊
 **Our env: python=3.10.13, cuda:11.8.**
